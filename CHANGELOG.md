@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.3...aichemist-msgraph-v1.0.4) (2026-04-24)
+
+
+### Bug Fixes
+
+* revert to NPM_TOKEN auth for publishing ([#21](https://github.com/Anras573/AIchemist-msgraph/issues/21)) ([23c5bf8](https://github.com/Anras573/AIchemist-msgraph/commit/23c5bf89aeaadbc0a65bc746889aea285e529c02))
+
 ## [1.0.3](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.2...aichemist-msgraph-v1.0.3) (2026-04-24)
 
 
