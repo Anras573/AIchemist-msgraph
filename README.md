@@ -11,7 +11,7 @@ Add the server to your MCP client config:
   "mcpServers": {
     "aichemist-msgraph": {
       "command": "npx",
-      "args": ["-y", "@anras573/aichemist-msgraph"],
+      "args": ["-y", "@anbora/aichemist-msgraph"],
       "env": {
         "MSGRAPH_TENANT_ID": "your-tenant-id",
         "MSGRAPH_APP_ID": "your-app-id",

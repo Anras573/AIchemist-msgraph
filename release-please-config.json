@@ -4,7 +4,7 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "@anras573/aichemist-msgraph",
+      "package-name": "@anbora/aichemist-msgraph",
       "changelog-path": "CHANGELOG.md"
     }
   }
