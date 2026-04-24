@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.2...aichemist-msgraph-v1.0.3) (2026-04-24)
+
+
+### Bug Fixes
+
+* add id-token permission to publish workflow ([#18](https://github.com/Anras573/AIchemist-msgraph/issues/18)) ([e9b2416](https://github.com/Anras573/AIchemist-msgraph/commit/e9b2416d67d147abfb23851030494afac320323f))
+
 ## [1.0.2](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.1...aichemist-msgraph-v1.0.2) (2026-04-24)
 
 
