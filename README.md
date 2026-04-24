@@ -1,30 +1,54 @@
-# Aichemmist-msgraph
+# AIchemist-msgraph
 
-Welcome to your new [Mastra](https://mastra.ai/) project! We're excited to see what you'll build.
+An [MCP](https://modelcontextprotocol.io/) server that exposes Microsoft Graph tools for use with AI assistants like Claude Desktop.
 
-## Getting Started
+## Usage
 
-Start the development server:
+Add the server to your MCP client config:
 
-```shell
-bun run dev
+```json
+{
+  "mcpServers": {
+    "aichemist-msgraph": {
+      "command": "npx",
+      "args": ["-y", "@anras573/aichemist-msgraph"],
+      "env": {
+        "MSGRAPH_TENANT_ID": "your-tenant-id",
+        "MSGRAPH_APP_ID": "your-app-id",
+        "MSGRAPH_REDIRECT_URI": "http://localhost:3000/"
+      }
+    }
+  }
+}
 ```
 
-Open [http://localhost:4111](http://localhost:4111) in your browser to access [Mastra Studio](https://mastra.ai/docs/studio/overview). It provides an interactive UI for building and testing your agents, along with a REST API that exposes your Mastra application as a local service. This lets you start building without worrying about integration right away.
+On first use, a browser window will open prompting you to sign in with your Microsoft 365 account.
 
-You can start editing files inside the `src/mastra` directory. The development server will automatically reload whenever you make changes.
+## Azure App Registration
 
-## Learn more
+Before using this server, you need to register an application in Azure:
 
-To learn more about Mastra, visit our [documentation](https://mastra.ai/docs/). Your bootstrapped project includes example code for [agents](https://mastra.ai/docs/agents/overview), [tools](https://mastra.ai/docs/agents/using-tools), [workflows](https://mastra.ai/docs/workflows/overview), [scorers](https://mastra.ai/docs/evals/overview), and [observability](https://mastra.ai/docs/observability/overview).
+1. Go to [portal.azure.com](https://portal.azure.com) → **Azure Active Directory** → **App registrations**
+2. Create a new registration
+3. Under **Authentication**, add a redirect URI: `http://localhost:3000/` (type: **Mobile and desktop applications**)
+4. Under **API permissions**, add the delegated permission: `Calendars.Read`
 
-If you're new to AI agents, check out our [course](https://mastra.ai/learn) and [YouTube videos](https://youtube.com/@mastra-ai). You can also join our [Discord](https://discord.gg/BTYqqHKUrf) community to get help and share your projects.
+## Environment Variables
 
-## Deploy to the Mastra platform
+| Variable | Required | Description |
+|---|---|---|
+| `MSGRAPH_TENANT_ID` | Yes | Your Azure AD tenant ID |
+| `MSGRAPH_APP_ID` | Yes | Your Azure app (client) ID |
+| `MSGRAPH_REDIRECT_URI` | Yes | Redirect URI registered in Azure (e.g. `http://localhost:3000/`) |
+| `MSGRAPH_SCOPE` | No | OAuth scope — defaults to `Calendars.Read` |
 
-The [Mastra platform](https://projects.mastra.ai) provides two products for deploying and managing AI applications built with the Mastra framework:
+## Available Tools
 
-- **Studio**: A hosted visual environment for testing agents, running workflows, and inspecting traces
-- **Server**: A production deployment target that runs your Mastra application as an API server
+### `get-calendar-events`
 
-Learn more in the [Mastra platform documentation](https://mastra.ai/docs/mastra-platform/overview).
+Fetches calendar events for the signed-in Microsoft 365 user within a time range.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `startDateTime` | `string` (ISO 8601) | Start of the time range. Defaults to now. |
+| `endDateTime` | `string` (ISO 8601) | End of the time range. Defaults to 7 days from now. |
