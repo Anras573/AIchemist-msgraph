@@ -1,8 +1,14 @@
 {
-  "name": "aichemist-msgraph",
+  "name": "@anras573/aichemist-msgraph",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "bin": {
+    "aichemist-msgraph": "./dist/stdio.js"
+  },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^25.6.0",
@@ -17,6 +23,7 @@
   "scripts": {
     "dev": "mastra dev",
     "build": "mastra build",
+    "build:mcp": "bun build src/mastra/mcp/stdio.ts --outfile dist/stdio.js --target node",
     "start": "mastra start"
   },
   "dependencies": {
