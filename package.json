@@ -27,6 +27,7 @@
     "start": "mastra start"
   },
   "dependencies": {
+    "@azure/identity": "^4.13.1",
     "@mastra/core": "^1.27.0",
     "@mastra/duckdb": "^1.2.0",
     "@mastra/evals": "^1.2.1",
@@ -35,6 +36,7 @@
     "@mastra/mcp": "^1.5.1",
     "@mastra/memory": "^1.17.0",
     "@mastra/observability": "^1.10.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "zod": "^4"
   }
 }
