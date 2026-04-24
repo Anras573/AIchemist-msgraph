@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.0...aichemist-msgraph-v1.0.1) (2026-04-24)
+
+
+### Bug Fixes
+
+* correct npm scope to [@anbora](https://github.com/anbora) ([3b22259](https://github.com/Anras573/AIchemist-msgraph/commit/3b22259872acb9d53ee1647ea1486a069cc68a21))
+* correct npm scope to [@anbora](https://github.com/anbora) ([72a6f5f](https://github.com/Anras573/AIchemist-msgraph/commit/72a6f5faeec0eeecb691c7e910f149c840a27d96))
+
 ## 1.0.0 (2026-04-24)
 
 
