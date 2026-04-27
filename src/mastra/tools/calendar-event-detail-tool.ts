@@ -7,7 +7,10 @@ export const calendarEventDetailTool = createTool({
   description:
     'Get the full details of a single Microsoft 365 calendar event, including its description/body. Use the event id returned by get-calendar-events.',
   inputSchema: z.object({
-    eventId: z.string().describe('The id of the calendar event.'),
+    eventId: z
+      .string()
+      .regex(/^[A-Za-z0-9+/=_\-]{10,}$/, 'Invalid event ID format')
+      .describe('The id of the calendar event.'),
   }),
   outputSchema: z.object({
     id: z.string(),
@@ -18,13 +21,13 @@ export const calendarEventDetailTool = createTool({
     isOnlineMeeting: z.boolean().optional(),
     onlineMeetingUrl: z.string().nullish(),
     body: z.object({
-      contentType: z.enum(['html', 'text']),
+      contentType: z.enum(['html', 'text']).catch('text'),
       content: z.string(),
     }),
   }),
   execute: async (input) => {
     const event = await graphClient
-      .api(`/me/events/${input.eventId}`)
+      .api(`/me/events/${encodeURIComponent(input.eventId)}`)
       .select('id,subject,start,end,location,isOnlineMeeting,onlineMeetingUrl,body')
       .get();
 
