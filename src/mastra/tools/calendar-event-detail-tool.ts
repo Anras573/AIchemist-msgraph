@@ -9,7 +9,7 @@ export const calendarEventDetailTool = createTool({
   inputSchema: z.object({
     eventId: z
       .string()
-      .regex(/^[A-Za-z0-9\-_]{10,}$/, 'Invalid event ID format')
+      .regex(/^[A-Za-z0-9\-_=]{10,}$/, 'Invalid event ID format')
       .describe('The id of the calendar event.'),
   }),
   outputSchema: z.object({
