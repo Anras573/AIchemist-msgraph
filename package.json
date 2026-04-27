@@ -1,6 +1,6 @@
 {
   "name": "@anbora/aichemist-msgraph",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "module": "index.ts",
   "type": "module",
   "bin": {
