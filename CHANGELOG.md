@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.4...aichemist-msgraph-v1.1.0) (2026-04-27)
+
+
+### Features
+
+* add get-calendar-event-detail tool ([#23](https://github.com/Anras573/AIchemist-msgraph/issues/23)) ([9d6ba1a](https://github.com/Anras573/AIchemist-msgraph/commit/9d6ba1a251b7e983d9546a7771fdc6b5952bec49))
+
 ## [1.0.4](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.3...aichemist-msgraph-v1.0.4) (2026-04-24)
 
 
