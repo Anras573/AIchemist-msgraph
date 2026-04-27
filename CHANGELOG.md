@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.1.0...aichemist-msgraph-v1.1.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* restore = to eventId regex to support base64 padding ([#25](https://github.com/Anras573/AIchemist-msgraph/issues/25)) ([adeeaac](https://github.com/Anras573/AIchemist-msgraph/commit/adeeaac87a325191c30113452ffadb33c9b32e8c))
+
 ## [1.1.0](https://github.com/Anras573/AIchemist-msgraph/compare/aichemist-msgraph-v1.0.4...aichemist-msgraph-v1.1.0) (2026-04-27)
 
 
